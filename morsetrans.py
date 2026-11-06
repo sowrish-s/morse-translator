@@ -40,18 +40,19 @@ def m2t(morcode):
     return ' '.join(decoded)
 
 # main
-
-print("Choose an option.")
-print("1. Text to Morse")
-print("2. Morse to Text")
-choice=int(input("Enter your choice : "))
-if choice==1:
-    t=input("Enter text you want to convert : ")
-    a=t2m(t)
-    print(a)
-elif choice==2:
-    m=input("Enter morse you want to translate : ")
-    a=m2t(m)
-    print(a)
-else:
-    print("Invalid input, enter either 1 or 2.")
+n=int(input("How many times do you want to translate? : "))
+for i in range(n):
+    print("Choose an option.")
+    print("1. Text to Morse")
+    print("2. Morse to Text")
+    choice=int(input("Enter your choice : "))
+    if choice==1:
+        t=input("Enter text you want to convert : ")
+        a=t2m(t)
+        print(a)
+    elif choice==2:
+        m=input("Enter morse you want to translate : ")
+        a=m2t(m)
+        print(a)
+    else:
+        print("Invalid input, enter either 1 or 2.")
